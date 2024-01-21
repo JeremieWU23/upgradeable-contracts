@@ -6,13 +6,14 @@ This repository includes a verified upgradeable contracts dataset and experiment
 
 ## RQ2
 ### Verified upgradeable contracts dataset
-`./RQ2/verified_dataset/verified_dataset.csv` contains 7,130 upgradeable contracts using proxy pattern and non-upgradeable contracts verified through manual verification.
+`./RQ2/verified_dataset/algo1.py` is the algorithm to detect potential proxy upgradeable contracts.
+`./RQ2/verified_dataset/verified_potential_4455.csv` contains 4,455 potential proxy upgradeable contracts.
+`./RQ2/verified_dataset/verified_dataset_with_opcodes_8704.csv` contains 8,704 verified contracts(4,352 upgradeable contracts using proxy pattern and 4,352 non-upgradeable contracts).
 
 ### Experimental results and evaluation
-- `./RQ2/cross validation` contains 5 models' cross-validation results.
-- `./RQ2/Evaluation/5 models evaluation.csv` contains the raw data of Results of Predicting Upgradeable Contract Using Five Machine Learning Algorithm in the paper.
+- `./RQ2/cross validation` contains the best model's cross-validation results.
+- `./RQ2/Evaluation/5_models_evaluation.csv` contains the raw data of Results of Predicting Upgradeable Contract Using Five Machine Learning Algorithm in the paper.
 
 ## RQ3
 ### Result of detection
 - `./RQ3/metamorphic_redeploy_changed.csv` contains 28 metamorphic contracts with different codes redeployed. 
-- `./RQ3/predicted_upgradeable.csv` contains 127,753 upgradeable contracts using the proxy pattern. Our method predicts these 127,753 upgradeable contracts out of 3,540,206 contracts that have made delegatecall transactions in Ethereum's first 12 million blocks.
